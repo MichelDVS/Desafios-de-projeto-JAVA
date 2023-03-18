@@ -1,34 +1,30 @@
-import java.util.Locale;
 import java.util.Scanner;
 
-import org.w3c.dom.UserDataHandler;
 
-public class ContaTerminal {
-    public static void main(String[] args) throws Exception {
+
+public class ContaTerminal {public static void main(String[] args) throws Exception {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Digite o nome do titular: ");
+        String nomeTitular = scanner.next().toUpperCase();
+
+        System.out.println("Digite o nome do titular: ");
+        String sobrenomeTitular = scanner.next().toUpperCase();
         
-        //TODO: 
-        //Conhecer e importar a classe Scanner;
-        //Exibir as mensagens para o nosso usuário;
-        //Obter pela scanner os valores digitados no terminal;
-        //Exibir a mensagem conta criada.
-
-        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
-
-        System.out.println("Digite o número da agência: ");
+      
+        System.out.println("Digite o numero da agencia: ");
         String agencia = scanner.next();
 
-        System.out.println("Digite o número da conta: ");
-        int numeroDaConta = scanner.nextInt();
+        System.out.println("Digite o numero da conta: ");
+        int numero = scanner.nextInt();        
 
-        System.out.println("Digite o nome do Titular da conta: ");
-        String nomeCliente = scanner.next();
-
-        System.out.println("Digite o número da conta: ");
-        Double depositoInicial = scanner.nextDouble();
+        System.out.println("Digite o valor inicial da conta: ");
+        double saldoInicial = scanner.nextDouble();
 
 
-        System.out.println("\nOlá [nomeCliente], obrigado por criar uma conta em nosso banco, sua agência é [agencia], conta [numeroDaConta] e seu saldo [depositoInicial] já está disponível para saque");
-
-
+        System.out.println("\nOla " + nomeTitular + " " + sobrenomeTitular + ", obrigado por criar uma conta em nosso banco, sua agencia e " + agencia + ", conta " + numero + " e seu saldo de " + saldoInicial + " ja esta disponivel para saque.\n\n");
+        
+        
     }
 }
